@@ -15,6 +15,7 @@
 </head>
 
 <body>
+<img src="../headerphoto.png" alt="headerphoto">
   @yield('content')
 
   <!-- JQuery -->
