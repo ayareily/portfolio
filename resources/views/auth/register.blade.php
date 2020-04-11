@@ -6,13 +6,11 @@
   <div class="container">
     <div class="row">
       <div class="mx-auto col col-12 col-sm-11 col-md-9 col-lg-7 col-xl-6">
-        <h1 class="text-center"><a class="text-dark" href="/">memo</a></h1>
         <div class="card mt-3">
           <div class="card-body text-center">
             <h2 class="h3 card-title text-center mt-2">ユーザー登録</h2>
 
             <div class="card-text">
-              {{--ここから--}}
               <form method="POST" action="{{ route('register') }}">
                 @csrf
                 <div class="md-form">
@@ -34,7 +32,6 @@
                 </div>
                 <button class="btn btn-block blue-gradient mt-2 mb-2" type="submit">ユーザー登録</button>
               </form>
-              {{--ここまで--}}
 
               <div class="mt-0">
                 <a href="{{ route('login') }}" class="card-text">ログインはこちら</a>
