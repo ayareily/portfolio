@@ -3,9 +3,12 @@
 @section('title', 'Diary')
 
 @section('content')
-
-@include('nav')
+  @include('nav')
   <div class="container">
-
+    @foreach($articles as $article)
+      
+      @include('articles.card')
+  @endforeach
   </div>
+
 @endsection
