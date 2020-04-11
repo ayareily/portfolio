@@ -8,7 +8,7 @@
   <textarea name="body" required class="form-control" rows="16" placeholder="本文">{{ old('body') }}</textarea>
 
 <div class="md-form">
-<label>投稿日</label>
-<input type="date" name="published_at" required class="form-control">
+<label></label>
+<input type="date" value="{{ date('Y-m-d') }}"　name="published_at" class="form-control" placeholder="投稿日">
 </div>
 </div>
