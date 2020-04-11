@@ -12,5 +12,5 @@
 */
 
 Auth::routes();
-Route::get('/diary', 'ArticleController@diary');
+Route::get('/diary', 'ArticleController@diary')->name('diary');
 Route::resource('/articles', 'ArticleController')->middleware('auth');

@@ -21,6 +21,6 @@ class ArticleController extends Controller
         $article->fill($request->all());
         $article->user_id = $request->user()->id;
         $article->save();
-        return redirect()->route('articles.diary');
+        return redirect()->route('diary');
     }
 }
