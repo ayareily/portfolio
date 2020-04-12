@@ -23,4 +23,8 @@ class ArticleController extends Controller
         $article->save();
         return redirect()->route('diary');
     }
+
+    public function edit(Article $article) {
+        return view('articles.edit', ['article' => $article]);
+    }
 }
