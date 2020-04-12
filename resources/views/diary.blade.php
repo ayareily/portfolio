@@ -9,6 +9,7 @@
       
       @include('articles.card')
       
+      
   @endforeach
 
 @endsection
