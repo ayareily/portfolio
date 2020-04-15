@@ -1,3 +1,4 @@
+<div class="col-sm-4">
 <div class="card mt-3">
   <div class="card-body d-flex flex-row">
     <div>
@@ -11,30 +12,27 @@
           {{ $article->created_at->format('Y/m/d') }}
         </div>
         </div>
-        <div class="card-text">
-          {{ $article->body }}
-        </div>
 
         @if( Auth::id() === $article->user_id )
-          <!-- dropdown -->
-          <div class="ml-auto card-text">
-            <div class="dropdown">
-              <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <button type="button" class="btn btn-link text-muted m-0 p-2">
-                  <i class="fas fa-ellipsis-v"></i>
-                </button>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right">
-                <a class="dropdown-item" href="{{ route("articles.edit", ['article' => $article]) }}">
-                  <i class="fas fa-pen mr-1"></i>記事を更新する
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item text-danger" data-toggle="modal" data-target="#modal-delete-{{ $article->id }}">
-                  <i class="fas fa-trash-alt mr-1"></i>記事を削除する
-                </a>
-              </div>
-            </div>
+    <!-- dropdown -->
+      <div class="ml-auto card-text">
+        <div class="dropdown">
+          <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button type="button" class="btn btn-link text-muted m-0 p-2">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="{{ route("articles.edit", ['article' => $article]) }}">
+              <i class="fas fa-pen mr-1"></i>記事を更新する
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item text-danger" data-toggle="modal" data-target="#modal-delete-{{ $article->id }}">
+              <i class="fas fa-trash-alt mr-1"></i>記事を削除する
+            </a>
           </div>
+        </div>
+      </div>
           <!-- dropdown -->
   
           <!-- modal -->
@@ -62,7 +60,12 @@
           </div>
           <!-- modal -->
         @endif
+
+        <div class="card-text">
+          {{ $article->body }}
+        </div>
         
     </div>
   </div>
+</div>
 </div>
