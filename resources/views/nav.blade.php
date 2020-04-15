@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand navbar-dark blue-gradient">
+<nav class="navbar navbar-expand navbar-dark purple-gradient">
 
-  <a class="navbar-brand" href="/"><i class="fab fa-fort-awesome mr-1"></i>Clark's Diary</a>
+  <a class="navbar-brand" href="{{ route('diary') }}"><i class="fab fa-fort-awesome mr-1"></i>Clark's Diary</a>
 
   <ul class="navbar-nav ml-auto">
 
