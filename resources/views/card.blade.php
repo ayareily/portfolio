@@ -1,21 +1,26 @@
 <div class="col-sm-4">
-<div class="card mt-3">
-  <div class="card-body d-flex flex-row">
-    <div>
-      <div class="card-body pt-0">
-        <h3 class="h4 card-title">
+  <div class="card mt-3" style="height:200px">
+    <div class="card-body d-flex flex-row">
+        <div class="card-body pt-0">
+          <h3 class="h4 card-title">
           <a class="text-dark" href="{{ route('articles.show', ['article' => $article]) }}">
           {{ $article->title }}
           </a>
           </h3>
         <div class="font-weight-lighter">
-          {{ $article->created_at->format('Y/m/d') }}
+          {{ $article->published_at->format('Y/m/d') }}
+        </div>
+        <div class="card-text">
+          <div class="body">
+            {{ $article->body }}
+          </div>
         </div>
         </div>
 
+
         @if( Auth::id() === $article->user_id )
     <!-- dropdown -->
-      <div class="ml-auto card-text">
+      <div class="ml-auto card-text float-right">
         <div class="dropdown">
           <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <button type="button" class="btn btn-link text-muted m-0 p-2">
@@ -60,12 +65,6 @@
           </div>
           <!-- modal -->
         @endif
-
-        <div class="card-text">
-          {{ $article->body }}
         </div>
-        
-    </div>
   </div>
-</div>
-</div>
+  </div>

@@ -15,7 +15,7 @@ class ArticleController extends Controller
     }
     
     public function diary() {
-        $articles = Article::all()->sortByDesc('created_at');
+        $articles = Article::all()->sortByDesc('published_at');
         return view('diary', ['articles' => $articles]);
     }
 
@@ -32,6 +32,7 @@ class ArticleController extends Controller
     public function store(ArticleRequest $request, Article $article) {
         $article->fill($request->all());
         $article->user_id = $request->user()->id;
+        $article->published_at = $article->published_at->format('Y-m-d');
         $article->save();
         $request->tags->each(function ($tagName) use ($article) {
             $tag = Tag::firstOrCreate(['name' => $tagName]);

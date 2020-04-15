@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Article extends Model
 {
-    protected $dates = ['created_at'];
+    protected $dates = ['published_at'];
 
     protected $fillable = [
         'title',
         'body',
-        'created_at'
+        'published_at',
     ];
     
     public function user(): BelongsTo

@@ -6,7 +6,7 @@
           {{ $article->title }}
           </h3>
         <div class="font-weight-lighter">
-          {{ $article->created_at->format('Y/m/d') }}
+          {{ $article->published_at->format('Y/m/d') }}
         </div>
         </div>
 

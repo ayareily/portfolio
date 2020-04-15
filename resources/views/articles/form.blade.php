@@ -12,10 +12,10 @@
 </div>
 <div class="form-group">
   <label></label>
-  <textarea name="body" required class="form-control" rows="16" placeholder="本文">{{ $article->title ?? old('body') }}</textarea>
+  <textarea name="body" required class="form-control" rows="16" placeholder="本文">{{ $article->body ?? old('body') }}</textarea>
 
-<div class="md-form">
+<div class="form-group">
 <label></label>
-<input type="date" value="{{ date('Y-m-d') }}"　name="created_at" class="form-control" placeholder="投稿日">
+<input class="form-control" name="published_at" type="date" value="{{ $article->published_at->format('Y-m-d') ?? date('Y-m-d') }}" placeholder="投稿日" id="published_at">
 </div>
 </div>

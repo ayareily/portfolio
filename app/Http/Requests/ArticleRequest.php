@@ -26,6 +26,7 @@ class ArticleRequest extends FormRequest
         return [
             'title' => 'required|max:50',
             'body' => 'required|max:500',
+            'published_at' => 'required|date',
             'tags' => 'json|regex:/^(?!.*\s).+$/u',
         ];
     }
