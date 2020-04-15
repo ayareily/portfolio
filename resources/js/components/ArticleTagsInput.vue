@@ -31,7 +31,7 @@ export default {
   data() {
     return {
       tag: '',
-      tags: [],
+      tags: this.initialTags,
       autocompleteItems: [{
         text: 'Laravel',
       }, {
