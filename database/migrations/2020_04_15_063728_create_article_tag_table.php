@@ -15,6 +15,16 @@ class CreateArticleTagTable extends Migration
     {
         Schema::create('article_tag', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('article_id');
+            $table->foreign('article_id')
+                ->references('id')
+                ->on('articles')
+                ->onDelete('cascade');
+            $table->bigInteger('tag_id');
+            $table->foreign('tag_id')
+                ->references('id')
+                ->on('tags')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -27,5 +37,9 @@ class CreateArticleTagTable extends Migration
     public function down()
     {
         Schema::dropIfExists('article_tag');
+    }
+
+    public function tags(): BelogsToMany {
+        return $this->belogsToMany('App\Tag')->withTimestamps();
     }
 }
