@@ -38,7 +38,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
-                    <span aria-hidden="true">×</span>
+                    <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <form method="POST" action="{{ route('articles.destroy', ['article' => $article]) }}">
@@ -57,11 +57,15 @@
           </div>
           <!-- modal -->
         @endif
-        
-        <div class="card-text">
-          {{ $article->body }}
+
         </div>
         
+        <div class="card-text">
+          {!! nl2br(e( $article->body )) !!}
+        </div>
+        </div>
+  <div class="card-body pt-0 pb-2 pl-3">
+    <div class="card-text">    
         
     </div>
   </div>
