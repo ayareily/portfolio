@@ -7,9 +7,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Article extends Model
 {
+    protected $dates = ['published_at'];
+
     protected $fillable = [
         'title',
         'body',
+        'published_at'
     ];
     
     public function user(): BelongsTo
