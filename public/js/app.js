@@ -1948,23 +1948,16 @@ __webpack_require__.r(__webpack_exports__);
     initialTags: {
       type: Array,
       "default": []
+    },
+    autocompleteItems: {
+      type: Array,
+      "default": []
     }
   },
   data: function data() {
     return {
       tag: '',
-      tags: this.initialTags,
-      autocompleteItems: [{
-        text: 'Laravel'
-      }, {
-        text: 'PHP'
-      }, {
-        text: 'Node.js'
-      }, {
-        text: 'N予備校'
-      }, {
-        text: 'はなまる'
-      }]
+      tags: this.initialTags
     };
   },
   computed: {

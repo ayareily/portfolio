@@ -27,22 +27,15 @@ export default {
       type: Array,
       default: [],
     },
+    autocompleteItems: {
+      type: Array,
+      default: [],
+    },    
   },
   data() {
     return {
       tag: '',
       tags: this.initialTags,
-      autocompleteItems: [{
-        text: 'Laravel',
-      }, {
-        text: 'PHP',
-      }, {
-        text: 'Node.js',
-      }, {
-        text: 'N予備校',
-      }, {
-        text: 'はなまる',
-      }],
     };
   },
   computed: {
