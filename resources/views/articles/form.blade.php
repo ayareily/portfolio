@@ -14,6 +14,6 @@
 
 <div class="md-form">
 <label></label>
-<input type="date" value="{{ $article->published_at ?? date('Y-m-d') }}"　name="published_at" class="form-control" placeholder="投稿日">
+<input type="date" value="{{ date('Y-m-d') }}"　name="created_at" class="form-control" placeholder="投稿日">
 </div>
 </div>

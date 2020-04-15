@@ -12,7 +12,7 @@ class Article extends Model
     protected $fillable = [
         'title',
         'body',
-        'published_at'
+        'created_at'
     ];
     
     public function user(): BelongsTo

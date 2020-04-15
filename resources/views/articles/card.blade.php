@@ -57,9 +57,12 @@
           </div>
           <!-- modal -->
         @endif
+        
         <div class="card-text">
           {{ $article->body }}
         </div>
+        
+        
     </div>
   </div>
 </div>
