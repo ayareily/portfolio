@@ -3,16 +3,11 @@
     <div>
       <div class="card-body pt-0">
         <h3 class="h4 card-title">
-          <a class="text-dark" href="{{ route('articles.show', ['article' => $article]) }}">
           {{ $article->title }}
-          </a>
           </h3>
         <div class="font-weight-lighter">
           {{ $article->created_at->format('Y/m/d') }}
         </div>
-        </div>
-        <div class="card-text">
-          {{ $article->body }}
         </div>
 
         @if( Auth::id() === $article->user_id )
@@ -62,7 +57,9 @@
           </div>
           <!-- modal -->
         @endif
-        
+        <div class="card-text">
+          {{ $article->body }}
+        </div>
     </div>
   </div>
 </div>
