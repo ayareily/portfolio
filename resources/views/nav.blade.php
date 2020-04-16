@@ -1,15 +1,24 @@
 <nav class="navbar navbar-expand navbar-dark purple-gradient">
 
-  <a class="navbar-brand" href="{{ route('diary') }}"><i class="fab fa-fort-awesome mr-1"></i>Clark's Diary</a>
+  <a class="navbar-brand" href="{{ route('diary') }}"><i class="fab fa-fort-awesome mr-1"></i>Clerk E</a>
 
   <ul class="navbar-nav ml-auto">
 
   <li class="nav-item">
-      <a class="nav-link" href="">Index</a>
+      <a class="nav-link" href="">HOME</a>
     </li>
   <li class="nav-item">
-      <a class="nav-link" href="">Profile</a>
+      <a class="nav-link" href="">PROFILE</a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ route('diary') }}">DIARY</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://twitter.com/ayareily"><i class="fab fa-twitter"></i></a>
+    </li>
+
+
+
     @guest
     <li class="nav-item">
       <a class="nav-link" href="{{ route('register') }}">ユーザー登録</a>
