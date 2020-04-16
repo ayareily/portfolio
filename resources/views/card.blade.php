@@ -1,26 +1,25 @@
 <div class="col-sm-4">
   <div class="card mt-3 ml-1 h-100">
     <div class="card-body d-flex flex-row">
-        <div class="card-body pr-2.5 pt-2 pb-0">
+        <div class="card-body pr-2 pt-2 pb-0 pl-2 text-center">
+<a class="text-dark" href="{{ route('articles.show', ['article' => $article]) }}">
           <h4 class="card-title w-100">
-          <a class="text-dark" href="{{ route('articles.show', ['article' => $article]) }}">
           {{ $article->title }}
-          </a>
           </h4>
-        <div class="font-weight-lighter">
+        <div class="font-weight-lighter pb-2">
           {{ $article->published_at->format('Y/m/d') }}
         </div>
         <div class="card-text">
           <div class="body">
-            {{ Str::limit($article->body, $limit=150, $end = '...') }}
+            {{ Str::limit($article->body, $limit=150, $end = '     ...more...') }}
           </div>
         </div>
         </div>
-
+        </a>
 
         @if( Auth::id() === $article->user_id )
     <!-- dropdown -->
-      <div class="h4 card-title flex-shrink-1">
+      <div class="ml-auto card-text float-right">
         <div class="dropdown">
           <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <button type="button" class="btn btn-link text-muted m-0 p-0">
@@ -41,7 +40,28 @@
           <!-- dropdown -->
   
           <!-- modal -->
-
+          <div id="modal-delete-{{ $article->id }}" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <form method="POST" action="{{ route('articles.destroy', ['article' => $article]) }}">
+                  @csrf
+                  @method('DELETE')
+                  <div class="modal-body">
+                    {{ $article->title }}を削除します。よろしいですか？
+                  </div>
+                  <div class="modal-footer justify-content-between">
+                    <a class="btn btn-outline-grey" data-dismiss="modal">キャンセル</a>
+                    <button type="submit" class="btn btn-danger">削除する</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
           <!-- modal -->
         @endif
         </div>
