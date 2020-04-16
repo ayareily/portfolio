@@ -3,16 +3,29 @@
     <div class="card-body d-flex flex-row">
         <div class="card-body pr-2 pt-2 pb-0 pl-2 text-center">
 <a class="text-dark" href="{{ route('articles.show', ['article' => $article]) }}">
-          <h4 class="card-title w-100">
+          <h4 class="card-title mb-0 w-100">
           {{ $article->title }}
           </h4>
-        <div class="font-weight-lighter pb-2">
+        <div class="font-weight-lighter">
           {{ $article->published_at->format('Y/m/d') }}
         </div>
+        <i class="far fa-heart fa-lg pt-2 pb-2"></i>
         <div class="card-text">
           <div class="body">
-            {{ Str::limit($article->body, $limit=150, $end = '     ...more...') }}
-          </div>
+            {{ Str::limit($article->body, $limit=150, $end = ' ...more...') }}
+
+          @foreach($article->tags as $tag)
+    @if($loop->first)
+      <div class="card-body p-1">
+        <div class="card-text text-primary">
+    @endif
+            {{ $tag->name }}
+    @if($loop->last)
+        </div>
+      </div>
+    @endif
+  @endforeach
+  </div>
         </div>
         </div>
         </a>
@@ -64,6 +77,7 @@
           </div>
           <!-- modal -->
         @endif
+        
         </div>
   </div>
   </div>

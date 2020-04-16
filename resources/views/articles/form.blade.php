@@ -16,6 +16,6 @@
 
 <div class="form-group">
 <label></label>
-<input class="form-control" name="published_at" type="date" value="{{ $article->published_at->format('Y-m-d') ?? date('Y-m-d') }}" placeholder="投稿日" id="published_at">
+<input class="form-control" name="published_at" type="date" value="{{ date('Y-m-d') ?? old($article->published_at) }}" placeholder="投稿日" id="published_at">
 </div>
 </div>
