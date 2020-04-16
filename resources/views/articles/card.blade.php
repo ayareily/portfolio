@@ -1,14 +1,14 @@
   <div class="card mt-3">
     <div class="card-body d-flex">
-        <div class="card-body pr-2 pt-2 pb-0 pl-2 text-center">
-<a class="text-dark" href="{{ route('articles.show', ['article' => $article]) }}">
+        <div class="card-body pr-2 pt-2 pb-0 pl-2">
+<a class="text-dark">
           <h4 class="card-title mb-0 w-100">
           {{ $article->title }}
           </h4>
         <div class="font-weight-lighter">
           {{ $article->published_at->format('Y/m/d') }}
         </div>
-        <i class="far fa-heart fa-lg pt-2 pb-2"></i>
+        <i class="far fa-heart fa-lg pt-3 pb-3"></i>
         <div class="card-text">
           <div class="body">
           {!! nl2br(e( $article->body )) !!}

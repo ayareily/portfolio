@@ -1,4 +1,4 @@
-<div class="col-sm-4">
+<div class="col-sm-4 mb-3">
   <div class="card mt-3 ml-1 h-100">
     <div class="card-body d-flex flex-row">
         <div class="card-body pr-2 pt-2 pb-0 pl-2 text-center">
@@ -12,7 +12,7 @@
         <i class="far fa-heart fa-lg pt-2 pb-2"></i>
         <div class="card-text">
           <div class="body">
-            {{ Str::limit($article->body, $limit=150, $end = ' ...more...') }}
+            {{ Str::limit($article->body, $limit=100, $end = ' ...more...') }}
 
           @foreach($article->tags as $tag)
     @if($loop->first)

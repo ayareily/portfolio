@@ -8,13 +8,16 @@
       <a class="nav-link" href="{{ route('index') }}">HOME</a>
     </li>
   <li class="nav-item">
-      <a class="nav-link" href="">PROFILE</a>
+      <a class="nav-link" href="{{ route('profile') }}">PROFILE</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="{{ route('diary') }}">DIARY</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="https://twitter.com/ayareily"><i class="fab fa-twitter"></i></a>
+      <a class="nav-link" href="https://twitter.com/ayareily"><i class="fab fa-twitter fa-lg"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://github.com/ayareily/"><i class="fab fa-github-alt fa-lg"></i></a>
     </li>
 
     @guest
