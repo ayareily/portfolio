@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand navbar-dark purple-gradient">
 
-  <a class="navbar-brand" href="{{ route('diary') }}"><i class="fab fa-fort-awesome mr-1"></i>Clerk E</a>
+  <a class="navbar-brand" href="{{ route('index') }}"><i class="fab fa-fort-awesome mr-1"></i>Clerk E</a>
 
   <ul class="navbar-nav ml-auto">
 
   <li class="nav-item">
-      <a class="nav-link" href="">HOME</a>
+      <a class="nav-link" href="{{ route('index') }}">HOME</a>
     </li>
   <li class="nav-item">
       <a class="nav-link" href="">PROFILE</a>
