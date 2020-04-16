@@ -17,8 +17,6 @@
       <a class="nav-link" href="https://twitter.com/ayareily"><i class="fab fa-twitter"></i></a>
     </li>
 
-
-
     @guest
     <li class="nav-item">
       <a class="nav-link" href="{{ route('register') }}">ユーザー登録</a>

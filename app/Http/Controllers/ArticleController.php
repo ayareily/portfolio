@@ -14,6 +14,9 @@ class ArticleController extends Controller
         $this->authorizeResource(Article::class, 'article');
     }
     
+    public function index() {
+        return view('/index');
+    }
     public function diary() {
         $articles = Article::all()->sortByDesc('published_at');
         return view('diary', ['articles' => $articles]);

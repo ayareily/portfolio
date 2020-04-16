@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', 'Portfolio')
+@section('title', 'Profile')
 
 @section('content')
   @include('nav')
