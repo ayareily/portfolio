@@ -15,7 +15,8 @@ class ArticleController extends Controller
     }
     
     public function index() {
-        return view('/index');
+        $articles = Article::paginate(3)->sortByDesc('published_at');
+        return view('index', ['articles' => $articles]);
     }
     public function diary() {
         $articles = Article::all()->sortByDesc('published_at');
