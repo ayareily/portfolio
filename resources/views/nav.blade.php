@@ -4,6 +4,12 @@
 
   <ul class="navbar-nav ml-auto">
 
+  <li class="nav-item">
+      <a class="nav-link" href="">Index</a>
+    </li>
+  <li class="nav-item">
+      <a class="nav-link" href="">Profile</a>
+    </li>
     @guest
     <li class="nav-item">
       <a class="nav-link" href="{{ route('register') }}">ユーザー登録</a>
