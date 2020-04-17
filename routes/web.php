@@ -17,3 +17,4 @@ Route::get('/diary', 'ArticleController@diary')->name('diary');
 Route::get('/profile', 'ArticleController@profile')->name('profile');
 Route::resource('/articles', 'ArticleController')->except(['index', 'show'])->middleware('auth');
 Route::resource('/articles', 'ArticleController')->only(['show']);
+Route::get('/tags/{name}', 'TagController@show')->name('tags.show');

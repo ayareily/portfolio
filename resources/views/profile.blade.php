@@ -56,19 +56,23 @@
 </div>
 
 <div class="card col-md-3 m-2">
+<a href="{{ route('tags.show', ['name' => 'PHP']) }}">
   <div class="card-body text-center">
     <h5 class="card-title">PHP</h5>
     <i class="fab fa-php fa-3x pb-3"></i>
     <h6 class="card-subtitle mb-2 text-muted">2020</h6>
   </div>
+</a>
 </div>
 
 <div class="card col-md-3 m-2">
+<a href="{{ route('tags.show', ['name' => 'Laravel']) }}">
   <div class="card-body text-center">
     <h5 class="card-title">Laravel</h5>
     <i class="fab fa-laravel fa-3x pb-3"></i>
     <h6 class="card-subtitle mb-2 text-muted">2020</h6>
   </div>
+  </a>
 </div>
 
 <div class="card col-md-3 m-2">

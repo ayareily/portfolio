@@ -19,7 +19,9 @@
       <div class="card-body p-1">
         <div class="card-text text-primary">
     @endif
+    <a href="{{ route('tags.show', ['name' => $tag->name]) }}" class="p-1 mr-1 mt-1 text-muted">
             {{ $tag->hashtag }}
+</a>
     @if($loop->last)
         </div>
       </div>
