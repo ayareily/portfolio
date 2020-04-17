@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand navbar-dark purple-gradient">
 
-  <a class="navbar-brand" href="{{ route('index') }}"><i class="fab fa-fort-awesome mr-1"></i>Clerk E</a>
+  <a class="navbar-brand" href="{{ route('index') }}"><i class="fab fa-fort-awesome mr-1"></i>Clerk E's Portrolio</a>
 
   <ul class="navbar-nav ml-auto">
 
@@ -19,16 +19,6 @@
     <li class="nav-item">
       <a class="nav-link" href="https://github.com/ayareily/"><i class="fab fa-github-alt fa-lg"></i></a>
     </li>
-
-    @guest
-    <li class="nav-item">
-      <a class="nav-link" href="{{ route('register') }}">ユーザー登録</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link" href="{{ route('login') }}">ログイン</a>
-    </li>
-    @endguest
 
     @auth
     <li class="nav-item">
