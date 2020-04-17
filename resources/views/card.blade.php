@@ -19,7 +19,7 @@
       <div class="card-body p-1">
         <div class="card-text text-primary">
     @endif
-            {{ $tag->name }}
+            {{ $tag->hashtag }}
     @if($loop->last)
         </div>
       </div>
