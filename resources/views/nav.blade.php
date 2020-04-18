@@ -1,29 +1,34 @@
 <nav class="navbar navbar-expand-sm navbar-dark purple-gradient">
+
 <a class="navbar-brand" href="{{ route('index') }}"><i class="fab fa-fort-awesome mr-1 pr-0"></i>Clerk E's Portrolio</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarToggler">
-    <ul class="navbar-nav justify-content-center mt-2 ml-5 mt-lg-0">
-      <li class="nav-item mr-3 ml-3">
+
+    <div class="collapse navbar-collapse " id="navbarToggler">
+    <ul class="navbar-nav">
+      <li class="nav-item text-center">
         <a class="nav-link" href="{{ route('index') }}">HOME</a>
       </li>
-       <li class="nav-item mr-3 ml-3">
+       <li class="nav-item text-center">
         <a class="nav-link" href="{{ route('profile') }}">PROFILE</a>
       </li>
-      <li class="nav-item mr-3 ml-3">
+      <li class="nav-item text-center">
         <a class="nav-link" href="{{ route('diary') }}">DIARY</a>
       </li>
     </ul>
+    
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
+      <li class="nav-item text-center">
         <a class="nav-link" href="https://twitter.com/ayareily"><i class="fab fa-twitter fa-lg"></i></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item text-center">
         <a class="nav-link" href="https://github.com/ayareily/"><i class="fab fa-github-alt fa-lg"></i></a>
       </li>
+    </ul>
 
     @auth
+    <ul class="navbar-nav ml-auto">
     <li class="nav-item">
       <a class="nav-link" href="{{ route('articles.create') }}"><i class="fas fa-pen mr-1"></i>投稿する</a>
     </li>
@@ -49,5 +54,6 @@
     @endauth
 
     </ul>
+</div>
 
 </nav>

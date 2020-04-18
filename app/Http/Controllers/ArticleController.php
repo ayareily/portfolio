@@ -15,12 +15,12 @@ class ArticleController extends Controller
     }
     
     public function index() {
-        $articles = Article::paginate(3)->sortByDesc('published_at');
+        $articles = Article::orderBy('published_at', 'DESC')->paginate('3');
         return view('index', ['articles' => $articles]);
     }
 
     public function profile() {
-        return view('profile');
+        return view('profile', ['articles' => $articles]);
     }
 
     public function diary() {
