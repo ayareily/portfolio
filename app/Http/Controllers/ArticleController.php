@@ -20,7 +20,7 @@ class ArticleController extends Controller
     }
 
     public function profile() {
-        return view('profile', ['articles' => $articles]);
+        return view('profile');
     }
 
     public function diary() {
