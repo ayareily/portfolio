@@ -6,7 +6,7 @@
   @include('nav')
   <div class="container">
 <h2 class="text-center mt-5">Sogetsu Sato</h2>
-<h3 class="text-center mt-3">Skills</h3>
+<h3 class="text-center mt-3">触ってきた技術たち</h3>
   <div class="row justify-content-center">
     <div class="card col-md-3 m-2">
       <div class="card-body text-center">
@@ -76,10 +76,22 @@
 </div>
 
 <div class="card col-md-3 m-2">
+<a href="{{ route('tags.show', ['name' => 'Node.js']) }}">
+  <div class="card-body text-center">
+    <h5 class="card-title">Node.js</h5>
+    <i class="fab fa-node-js fa-3x pb-3"></i>
+    <h6 class="card-subtitle mb-2 text-muted">2020</h6>
+  </div>
+</a>
+</div>
+
+<div class="card col-md-3 m-2">
+<a href="{{ route('tags.show', ['name' => 'Bootstrap']) }}">
   <div class="card-body text-center">
     <h5 class="card-title">Bootstrap</h5>
     <i class="fab fa-bootstrap fa-3x pb-3"></i>
     <h6 class="card-subtitle mb-2 text-muted">2020</h6>
   </div>
+</a>
 </div>
 @endsection

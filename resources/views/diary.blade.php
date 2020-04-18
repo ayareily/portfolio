@@ -4,7 +4,6 @@
 
 @section('content')
   @include('nav')
-  @include('footer')
   <div class="container">
   <div class="row">
   @foreach($articles as $article)
