@@ -4,7 +4,7 @@
 
 @section('content')
   @include('nav')
-  <div class="container justify-content-center">
+  <div class="container-fluid justify-content-center " style="background-color: #FFCCFF;">
     <img src="{{ asset('/img/profile.jpg') }}" class="rounded-circle mx-auto d-block p-3" style="height:50vh">
 <h2 class="text-center">Sogetsu Sato</h2>
 <h3 class="text-center mt-3">触ってきた技術たち</h3>
