@@ -12,6 +12,12 @@
     @include('card')
       
   @endforeach
+  
+  </div>
+  </div>
+  <div class="row d-flex justify-content-center" style="background-color: #FDEDFB;">
+    {{ $articles->links() }}
+  </div>
   </div>
   </div>
 
