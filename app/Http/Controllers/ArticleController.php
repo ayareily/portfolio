@@ -24,7 +24,7 @@ class ArticleController extends Controller
     }
 
     public function diary() {
-        $articles = Article::orderBy('published_at')->paginate('9');
+        $articles = Article::orderBy('published_at', 'DESC')->paginate('9');
         return view('diary', ['articles' => $articles]);
     }
 
