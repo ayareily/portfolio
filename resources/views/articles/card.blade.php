@@ -8,7 +8,7 @@
         <div class="font-weight-lighter">
           {{ $article->published_at->format('Y/m/d') }}
         </div>
-        <i class="far fa-heart fa-lg pt-3 pb-3"></i>
+        <i class="i far fa-heart fa-lg pt-3 pb-3"></i>
         <div class="card-text">
           <div class="body">
           {!! nl2br(e( $article->body )) !!}

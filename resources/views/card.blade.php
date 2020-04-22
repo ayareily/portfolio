@@ -2,21 +2,21 @@
   <div class="card mt-3 ml-1 h-100">
     <div class="card-body d-flex flex-row">
         <div class="card-body pr-2 pt-2 pb-0 pl-2 text-center">
-<a class="text-dark" href="{{ route('articles.show', ['article' => $article]) }}">
-          <h4 class="card-title mb-0 w-100">
-          {{ $article->title }}
-          </h4>
-        <div class="font-weight-lighter">
-          {{ $article->published_at->format('Y/m/d') }}
-        </div>
-        <i class="far fa-heart fa-lg pt-2 pb-2"></i>
-        <div class="card-text">
-          <div class="body">
-            {{ Str::limit($article->body, $limit=100, $end = ' ...more...') }}
+          <a class="text-dark" href="{{ route('articles.show', ['article' => $article]) }}">
+            <h4 class="card-title mb-0 w-100">
+            {{ $article->title }}
+            </h4>
+            <div class="font-weight-lighter">
+            {{ $article->published_at->format('Y/m/d') }}
+            </div>
+            <i class="i far fa-heart fa-lg pt-2 pb-2"></i>
+            <div class="card-text">
+              <div class="body card-text">
+              {{ Str::limit($article->body, $limit=100, $end = ' ...more...') }}
 
-          @foreach($article->tags as $tag)
-    @if($loop->first)
-      <div class="card-body p-1">
+              @foreach($article->tags as $tag)
+              @if($loop->first)
+              <div class="card-body p-1">
         <div class="card-text text-primary">
     @endif
     <a href="{{ route('tags.show', ['name' => $tag->name]) }}" class="p-1 mr-1 mt-1 text-muted">
