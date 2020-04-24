@@ -8,7 +8,7 @@
     <img src="{{ asset('/img/profile.jpg') }}" class="rounded-circle mx-auto d-block p-3" style="height:50vh">
       <h2 class="text-center">Sogetsu Sato</h2>
       <h3 class="text-center mt-3">触ってきた技術たち</h3>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" id="profileskills">
 
           <div class="card col-md-2 m-2">
             <div class="card-body text-center">

@@ -1,9 +1,9 @@
 #app {
   background-color: #FDEDFB;
-  height: 100vh;
+  background-attachment: fixed;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   color: #C71585;
 }
 
@@ -11,7 +11,7 @@ h1, h2, h3, h4 {
   color: #F279BC;
 }
 
-.card-text {
+.card-title {
   color: #7c1d2d;
 }
 
@@ -26,9 +26,3 @@ h1, h2, h3, h4 {
 .font-weight-lighter {
   color: #2c1171;
 }
-
-/*
-.card-text {
-  color: #3D0C86;
-}
-*/

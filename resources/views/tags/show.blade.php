@@ -13,12 +13,10 @@
         </div>
       </div>
     </div>
-    <div class="container">
-  <div class="row">
-    @foreach($tag->articles as $article)
-      @include('card')
-    @endforeach
+      <div class="row">
+        @foreach($tag->articles as $article)
+          @include('card')
+        @endforeach
+      </div>
   </div>
-</div>
-</div>
 @endsection
