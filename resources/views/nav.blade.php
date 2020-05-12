@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color: #F279BC;">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #F279BC;">
 
 <a class="navbar-brand" href="{{ route('index') }}"><i class="fab fa-fort-awesome mr-1 pr-0"></i>Clerk E's Portrolio</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
