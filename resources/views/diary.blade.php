@@ -6,7 +6,7 @@
   @include('nav')
   <div class="container-fluid" style="background-color: #FDEDFB; padding-top: 56pt;">
   <h1 class="text-center p-3 m-0">学習記録</h1>
-  <div class="row">
+  <div class="row mb-3">
   @foreach($articles as $article)
       
     @include('card')
