@@ -71,8 +71,11 @@
                     <a class="d-flex align-items-end mb-2" href="{{ route('tags.show', ['name' => 'git']) }}">
                     <i class="si fab fa-git-alt fa-2x mr-2"></i>git</a>
 
-                    <a class="d-flex align-items-end mb-2" href="https://github.com/ayareily/">
+                    <a class="d-flex align-items-end mb-2" href="{{ route('tags.show', ['name' => 'GitHub']) }}">
                     <i class="si fab fa-github fa-2x mr-2"></i>GitHub</a>
+
+                    <a class="d-flex align-items-end mb-2" href="{{ route('tags.show', ['name' => '基本情報']) }}">
+                    <i class="si fas fa-edit fa-2x mr-2"></i>基本情報技術者試験（勉強のみ，秋受験予定）</a>
                 </li>
 
                 <li class="list-group-item">
