@@ -37,13 +37,13 @@
                 </li>
 
                 <li class="list-group-item">
-                  <h5 class="list-group-item-heading">2019.8</h5>
+                  <h5 class="list-group-item-heading">2018.10</h5>
                     <a class="d-flex align-items-end mb-2" href="{{ route('tags.show', ['name' => 'PC修理']) }}">
                     <i class="si fas fa-wrench fa-2x mr-2"></i>PC Repair</a>
                 </li>
 
                 <li class="list-group-item">
-                  <h5 class="list-group-item-heading">2019.10</h5>
+                  <h5 class="list-group-item-heading">2019.8</h5>
                     <a class="d-flex align-items-end mb-2" href="{{ route('tags.show', ['name' => 'GAS']) }}">
                     <i class="si fab fa-google fa-2x mr-2"></i>GAS</a>
                 </li>
