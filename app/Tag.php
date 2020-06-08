@@ -16,6 +16,6 @@ class Tag extends Model
     }
 
     public function articles(): BelongsToMany {
-        return $this->belongsToMany('App\Article')->withTimestamps();
+        return $this->belongsToMany('App\Article')->orderBy('published_at', 'DESC');
     }
 }
