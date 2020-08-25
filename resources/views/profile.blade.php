@@ -6,7 +6,7 @@
   @include('nav')
   <div class="container-fluid justify-content-center mb-5" style="background-color: #FDEDFB; margin-top: 56px;">
     <img src="{{ asset('/img/profile.jpg') }}" class="rounded-circle mx-auto d-block p-3" style="height:50vh">
-      <h2 class="text-center">Ayame Ninomiya</h2>
+      <h2 class="text-center">Ayame Kashiwagi</h2>
         <div class="row justify-content-center" id="profileskills">
 
           <div class="card col-md-10 m-2">
